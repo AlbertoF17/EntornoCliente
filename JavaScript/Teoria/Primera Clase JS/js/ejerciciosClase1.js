@@ -73,20 +73,15 @@ console.log("Suma total: " + suma2);
 //aleatorios entre 1 y 300. A continuación, pedir un número entero entre 0 y 9, e imprimir todas las posiciones
 //del array que tengan un número acabado en ese dígito. Esos números, además de imprimirlos, almacenarlos en
 //un array de salida con el tamaño adecuado.
-
-//Obtener el tamaño del array desde el usuario (puedes usar un prompt)
 const tamano2 = parseInt(prompt("Introduce el tamaño del array 2:"));
 const arrayEnteros2 = [];
 for (let i = 0; i < tamano2; i++) {
-    arrayEnteros2.push(Math.floor(Math.random() * 300) + 1);
+    arrayEnteros2.push(Math.floor(Math.random() * 299) + 1);
 }
 
 const digito = parseInt(prompt("Introduce un número entre 0 y 9:"));
-if (!isNaN(digito) && digito >= 0 && digito <= 9) {        const numerosTerminadosEnDigito = arrayEnteros2.filter(numero => numero % 10 === digito);
-    console.log("Números terminados en " + digito + ": " + numerosTerminadosEnDigito.join(" "));
-} else {
-    console.log("El número debe estar entre 0 y 9.");
-}
+const numerosTerminadosEnDigito = arrayEnteros2.filter(numero => numero % 10 === digito);
+console.log("Números terminados en " + digito + ": " + numerosTerminadosEnDigito.join(" "));
 
 //4)Introduce por alerta(o formulario en php) el número de tu DNI, y vuelve a imprimirlo seguido de la letra.
 //Para calcular la letra, cogeremos el resto de dividir nuestro dni entre 23, el resultado debe estar entre 0 y 22.
