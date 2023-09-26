@@ -1,0 +1,7 @@
+.visible {
+    background-color: blue;
+    visibility: visible;
+}
+.oculto {
+    visibility: hidden;
+}
