@@ -57,9 +57,10 @@ const mainObject = document.createElement("main");
 mainObject.style.display = "flex";
 mainObject.style.justifyContent = "center";
 mainObject.style.alignItems = "center";
-mainObject.style.height = "65vh";
+mainObject.style.minHeight = "65vh";
 mainObject.style.padding = "1rem";
 mainObject.style.gap = "2.5rem";
+mainObject.style.flexWrap = "wrap";
 
 const imagenCartas1 = document.createElement("img");
 imagenCartas1.src = "./media/github.png";
