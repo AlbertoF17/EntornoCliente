@@ -38,7 +38,7 @@ linkedinLink.style.color = "white";
 
 githubLink.href = "https://github.com/AlbertoF17";
 githubLink.textContent = "GitHub";
-paginaLink.href = "https://albertof17.github.io/Portfolio/AlbertoFernandez_Portfolio";
+paginaLink.href = "https://albertof17.github.io/Portfolio/AlbertoFernandezGomez_Portfolio/";
 paginaLink.textContent = "Mi página";
 linkedinLink.href = "https://www.linkedin.com/in/alberto-fg/";
 linkedinLink.textContent = "LinkedIn";
@@ -152,7 +152,7 @@ githubIr.href = "https://github.com/AlbertoF17";
 githubIr.textContent = "Ir allí";
 githubIr.target = "_blank"
 githubIr.style.color = "white";
-paginaIr.href = "https://albertof17.github.io/Portfolio/AlbertoFernandez_Portfolio";
+paginaIr.href = "https://albertof17.github.io/Portfolio/AlbertoFernandezGomez_Portfolio/";
 paginaIr.textContent = "Ir allí";
 paginaIr.target = "_blank"
 paginaIr.style.color = "white";
