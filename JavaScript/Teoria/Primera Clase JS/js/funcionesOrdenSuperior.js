@@ -190,13 +190,13 @@ arrayNeg.forEach(element => {
 if (cont > 1) {
     console.log(`En el array existen ${cont} números negativos`);
 } else if (cont > 0) {
-    console.log(`En el array existen " + ${cont} + " número negativo`);
+    console.log(`En el array existen ${cont} número negativo`);
 } else {
     console.log("En el array no existen números negativos");
 }
 
 //EJERCICIO 2
-console.log("2) Dado un array de Strings, encuentra el índice del primer array que empiece por la letra 'A'");
+console.log("2) Dado un array de Strings, encuentra el índice de la primera cadena que empiece por la letra 'A'");
 cont = -1;
 arrayStrings = ["Pablito", "Juaky", "Alberto", "Jouse", "María"];
 arrayStrings.forEach(element => {
@@ -226,20 +226,16 @@ array3Cifras.forEach(element => {
 console.log(`La suma de las últimas cifras de cada número del array es: ${suma}`);
 
 //EJERCICIO 4
-console.log("4) Dado un array de arrays, filtra el array para que sólo queden los arrays de dimensión 5");
-function filtrar5D(array, startD = 0) {
-    return array.filter(e => {
-        if (Array.isArray(e)) {
-            return filtrar5D(e, startD + 1);
-        }
-        return startD === 5;
-    });
-}
+console.log("4) Dado un array de arrays, filtra el array para que sólo queden los arrays de longitud 5");
+const array2D = [[5,3,4], [1, 0], [3], [3,4,21,6,7], [8, 9]];
+let nuevoArray2D = [];
+array2D.forEach(element => {
+    if(element.length === 5){
+        nuevoArray2D.push(element);
+    }
+})
 
-const array6D = [[5], [1, 0, [2, 0, 4, [3, [4, [5, 6]]]]], [3, [0, 5]], [[3, [0, 5]], 8, 9]];
-
-const array5D = filtrar5D(array6D);
-console.log(array5D);
+console.log(nuevoArray2D);
 
 //EJERCICIO 5
 console.log("5) Dado un array de Strings, encuentra el primer array de longitud 3");
