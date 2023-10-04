@@ -84,9 +84,24 @@ boton.addEventListener("click", () => {
         let apellido = document.createElement("h2");
         nombre.textContent = alumnoSeleccionado.nombre;
         apellido.textContent = alumnoSeleccionado.apellido;
+        let botonEliminar = document.createElement("button");
+        botonEliminar.className = "boton-eliminar";
+        botonEliminar.textContent = "Eliminar";
+        botonEliminar.type = "button";
         cartaAlumno.appendChild(nombre);
         cartaAlumno.appendChild(apellido);
         cardContainer.appendChild(cartaAlumno);
+        cartaAlumno.appendChild(botonEliminar);
+        botonEliminar.addEventListener("click", function() {
+            const carta = this.parentNode;
+            const index = arrayNumeros.indexOf(num);
+            if (index !== -1) {
+                arrayNumeros.splice(index, 1);
+            }
+            carta.parentNode.removeChild(carta);
+        });
+    } else {
+        alert("Todos los alumnos ya han sido generados");
     }
-    
+
 });

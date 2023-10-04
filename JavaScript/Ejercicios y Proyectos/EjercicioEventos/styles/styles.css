@@ -66,6 +66,22 @@ img{
     text-align: center;
 }
 
+.boton-eliminar{
+    padding: 0.3rem;
+    margin-top: 2rem;
+    width: 35%;
+    height: 17%;
+    color: white;
+    background-color: #343434;
+    border: 1px dashed white;
+}
+
+.boton-eliminar:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
 h1{
     font-size: 2rem;
 }
