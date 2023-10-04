@@ -69,21 +69,20 @@ const Pablo = {
 };
 
 let arrayAlumnos = [Alberto, Alicia, Antonio, Carlos, Curro, Jouse, Juanbe, Marcelo, Maria, Miguel, Natalia, Noelia, Pablo];
-let arrayNumeros = [];
+let alumnosGenerados = [];
 boton.addEventListener("click", () => {
-    if(arrayNumeros.length<arrayAlumnos.length){
-        let num = 0;
-        do {
-            num = Math.floor(Math.random() * arrayAlumnos.length);
-        } while (arrayNumeros.includes(num));
-        arrayNumeros.push(num);
+    if(arrayAlumnos.length > 0){
+        let num = Math.floor(Math.random() * arrayAlumnos.length);
         let alumnoSeleccionado = arrayAlumnos[num];
+        alumnosGenerados.push(alumnoSeleccionado);
+        arrayAlumnos.splice(num, 1);
         let cartaAlumno = document.createElement("div");
         cartaAlumno.className = "card";
         let nombre = document.createElement("h1");
         let apellido = document.createElement("h2");
         nombre.textContent = alumnoSeleccionado.nombre;
         apellido.textContent = alumnoSeleccionado.apellido;
+
         let botonEliminar = document.createElement("button");
         botonEliminar.className = "boton-eliminar";
         botonEliminar.textContent = "Eliminar";
@@ -92,12 +91,13 @@ boton.addEventListener("click", () => {
         cartaAlumno.appendChild(apellido);
         cardContainer.appendChild(cartaAlumno);
         cartaAlumno.appendChild(botonEliminar);
-        botonEliminar.addEventListener("click", function() {
-            const carta = this.parentNode;
-            const index = arrayNumeros.indexOf(num);
+        botonEliminar.addEventListener("click", function () {
+            const index = alumnosGenerados.indexOf(alumnoSeleccionado);
             if (index !== -1) {
-                arrayNumeros.splice(index, 1);
+                alumnosGenerados.splice(index, 1);
+                arrayAlumnos.push(alumnoSeleccionado);
             }
+            const carta = this.parentNode;
             carta.parentNode.removeChild(carta);
         });
     } else {
