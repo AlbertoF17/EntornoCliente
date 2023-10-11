@@ -3,8 +3,12 @@ export class Coche extends Vehículos {
         super(marca, modelo, matricula, titular);
         this.tipo = tipo;
     }
+
+    static encenderIntermitente(lado) {
+        console.log(`Encendiendo intermitente del lado ${lado}}`);
+    }
     
-    arrancar() {
-        return "coche arrancado";
+    activarLimpiaparabrisas() {
+        return "parabrisas limpiado";
     }
 }
