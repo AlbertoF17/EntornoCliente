@@ -10,6 +10,11 @@ body{
     color: white;
 }
 
+.title{
+    text-align: center;
+    margin-top: 2rem;
+}
+
 #appDiv{
     display: flex;
     justify-content: center;
