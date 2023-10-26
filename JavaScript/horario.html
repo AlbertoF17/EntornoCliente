@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8" />
+        <meta name="description" content="Horario segundo DAW" />
+        <meta name="keywords" content="Horario desarrollo aplicaciones web" />
+        <meta name="language" content="ES" />
+        <meta name="author" content="joaquin.borrego@vedruna.es" />
+        <meta name="robots" content="index,follow" />
+        <meta name="revised" content="Friday, September 22th, 2023, 21:00pm" />
+        <meta name="viewport" content="width=device-width, initial scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE-edge, chrome1" />
+        <!-- <meta http-equiv="refresh" content="300; URL=index.html" /> -->
+        <!-- <link href="css/style.css" rel="stylesheet" type="text/css" /> -->
+      
+        <title>Horario 2 DAW</title>
+      
+        <style>
+            html {
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                scroll-behavior: smooth;
+            }
+
+            *,
+            *:before,
+            *:after {
+                box-sizing: inherit;
+            }
+
+            body {
+                margin: 0;
+                -webkit-hyphens: auto;
+                -ms-hyphens: auto;
+                hyphens: auto;
+                height: 100vh;
+                width: 100vw;
+                background-color:rgb(252, 252, 252);
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            caption {
+                font-size: 1.5em;
+                font-weight: bold;
+                margin: 2vh 0;
+            }
+
+            th, td {
+                padding: 8px;
+                text-align: center;
+                border: 1px solid #ddd;
+                width: 16.6%;
+            }
+
+            .pablo {
+                background-color: greenyellow;
+            }
+
+            .alicia {
+                background-color: rgb(255, 184, 91);
+            }
+
+            .marifer {
+                background-color: yellow;
+            }
+
+            .ramon {
+                background-color:rgb(162, 228, 245);
+            }
+
+            .joaquin {
+                background-color: pink;
+            }
+
+            #horario th:not([scope]) {
+                background-color: lightgray;
+            }
+
+            td[colspan="5"] {
+                background-color: grey;
+            }
+
+            #leyenda {
+                margin-top: 5vh;
+            }
+
+            @media (max-width: 458px) { 
+                th[scope="row"], #horario th:not([scope]){
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <table id="horario">
+            <caption>Horario 2º DAW</caption>
+            <tr>
+                <th></th>
+                <th scope="column">Lunes</th>
+                <th scope="column">Martes</th>
+                <th scope="column">Miércoles</th>
+                <th scope="column">Jueves</th>
+                <th scope="column">Viernes</th>
+            </tr>
+            <tr>
+                <th scope="row">15:05</th>
+                <td rowspan="2" class="pablo">Empresa</td>
+                <td class="alicia">Inglés</td>
+                <td rowspan="2" class="pablo">Empresa</td>
+                <td rowspan="2" class="alicia">Inglés</td>
+                <td rowspan="2" class="ramon">Despliegue</td>
+            </tr>
+            <tr>
+                <th scope="row">15:55</th>
+                <td rowspan="2" class="joaquin">Servidor</td>
+            </tr>
+            <tr>
+                <th scope="row">16:50</th>
+                <td class="marifer">Diseño</td>
+                <td class="joaquin">Cliente</td>
+                <td class="ramon">Despliegue</td>
+                <td class="joaquin">Servidor</td>
+            </tr>
+            <tr>
+                <th scope="row">17:45</th>
+                <td colspan="5">Recreo</td>
+            </tr>
+            <tr>
+                <th scope="row">18:15</th>
+                <td class="joaquin">Diseño</td>
+                <td class="joaquin">Diseño</td>
+                <td class="joaquin">Cliente</td>
+                <td rowspan="3" class="joaquin">Servidor</td>
+                <td rowspan="3" class="joaquin">Diseño</td>
+            </tr>
+            <tr>
+                <th scope="row">19:10</th>
+                <td rowspan="2" class="joaquin">Cliente</td>
+                <td rowspan="2" class="joaquin">Cliente</td>
+                <td rowspan="2" class="joaquin">Servidor</td>
+            </tr>
+            <tr>
+                <th scope="row">20:05</th>
+            </tr>
+
+        </table>
+
+        <table id="leyenda">
+            <caption>Leyenda</caption>
+            <tr>
+                <th class="marifer">Maria Fernanda</th>
+                <th class="pablo">Pablo</th>
+                <th class="joaquin">Joaquin</th>
+                <th class="alicia">Alicia</th>
+                <th class="ramon">Ramon</th>
+            </tr>
+        </table>
+    </body>
+</html>
