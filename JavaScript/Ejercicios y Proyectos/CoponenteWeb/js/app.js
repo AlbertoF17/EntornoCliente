@@ -15,7 +15,7 @@ body.insertAdjacentHTML('beforeend', component);
 
 const pictures = document.querySelectorAll('.picture img');
 pictures.forEach(picture => {
-    picture.addEventListener('click', function () {
-        picture.classList.toggle('disabled');
+    picture.parentNode.addEventListener('click', function () {
+        picture.parentNode.classList.toggle('disabled');
     });
 });
