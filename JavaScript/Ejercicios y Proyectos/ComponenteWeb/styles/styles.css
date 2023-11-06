@@ -6,10 +6,25 @@ html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
+body{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .picture {
@@ -17,24 +32,25 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 14rem;
+    text-align: center;
+    max-width: 14rem;
     height: 19rem;
     padding: 1rem;
     margin: 2rem;
-    border: 1px solid #ccc;
     border-radius: 1rem;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s;
 }
 
-.picture:hover {
+.picture:hover img{
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .picture img {
     border-radius: 1rem;
     width: 90%;
+    height: 90%;
+    overflow: none;
 }
 
 .disabled {
