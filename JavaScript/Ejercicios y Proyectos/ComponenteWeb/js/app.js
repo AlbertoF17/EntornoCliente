@@ -1,27 +1,30 @@
 function createPicture(props) {
-    const pictureTemplateStr = `
-        <div class="picture">
-            <img src="${props.picture.large}"/>
-            <p>${props.name.first} ${props.name.last}</p>
-        </div>
-    `;
-    const picture = document.createElement('div');
-    picture.innerHTML = pictureTemplateStr;
-    return picture;
+    const div = document.createElement('div');
+    div.className = 'picture';
+    const img = document.createElement('img');
+    img.src = props.picture.large;
+    const p = document.createElement('p');
+    p.textContent = `${props.name.first} ${props.name.last}`;
+    div.appendChild(img);
+    div.appendChild(p);
+    return div;
 }
 
-async function fetchData(gender) {
+async function fetchData() {
     try {
-        const response = await fetch(`https://randomuser.me/api/?gender=${gender}&results=25`);
+        const response = await fetch('https://randomuser.me/api/?results=5');
         const data = await response.json();
         const results = data.results;
-        const container = document.getElementById('js-vanilla-container');
-        container.innerHTML = '';
+        const vanillaContainer = document.getElementById('js-vanilla-container');
+        const container = document.createElement('div');
+        container.classList.add('container');
 
         results.forEach(result => {
             const picture = createPicture(result);
             container.appendChild(picture);
         });
+
+        vanillaContainer.appendChild(container);
 
         const pictures = document.querySelectorAll('.picture img');
         pictures.forEach(picture => {
@@ -34,10 +37,4 @@ async function fetchData(gender) {
     }
 }
 
-document.getElementById('maleButton').addEventListener('click', () => {
-    fetchData('male');
-});
-
-document.getElementById('femaleButton').addEventListener('click', () => {
-    fetchData('female');
-});
+fetchData()
